@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33763075111749446}
   - component: {fileID: 65290720846102052}
   - component: {fileID: 23975163377697610}
+  - component: {fileID: 114949475982311140}
   m_Layer: 0
   m_Name: Basket
   m_TagString: Untagged
@@ -93,3 +94,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114949475982311140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1045364365359544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a3d611d6b2a594592f76a54611b1fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 114603587329025678, guid: 7c91844f84d3c494b81c06bb879d29ee,
+    type: 2}

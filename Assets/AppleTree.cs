@@ -10,9 +10,9 @@ public class AppleTree : MonoBehaviour {
 	//speed at which the AppleTree move in Meters / second
 	public float speed = 1f;
 	//distance where apple tree turns around
-	public float leftAndRightEdge = 10f;
+	public float leftAndRightEdge = 20f;
 	//chance that tree will chaneg direction
-	public float chanceToChangeDirection = 0.1f;
+	public float chanceToChangeDirections = 0.1f;
 	//rate at which apples will be insantiated
 	public float secondsBetweenAppleDrops = 1f;
 
@@ -30,22 +30,22 @@ public class AppleTree : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//handle basic movement
-		Vector3 pos = transform.position;
-		pos.x += speed * Time.deltaTime;
-		transform.position = pos;
-		//change direction
-		if (pos.x < -leftAndRightEdge ) {
-			speed = Mathf.Abs (speed); //move right
-				} 
-		else if (pos.x > leftAndRightEdge ) {
-			speed = -Mathf.Abs (speed); // move left
-			}
+    // Basic Movement
+    Vector3 pos = transform.position;
+    pos.x += speed * Time.deltaTime;
+    transform.position = pos;
+    // Changing Direction
+    if ( pos.x < -leftAndRightEdge ) {
+        speed = Mathf.Abs(speed);  // Move right
+    } else if ( pos.x > leftAndRightEdge ) {
+        speed = -Mathf.Abs(speed); // Move left
+    }
+}
 
-	}
-	void FixedUpdate(){
-	if (Random.value < chanceToChangeDirection ) {
-		speed *= -1; //change direction
-	}
+	void FixedUpdate() {
+    	// Changing Direction Randomly
+    	if ( Random.value < chanceToChangeDirections ) {
+        	speed *= -1;  // Change direction
+    	}
 	}
 }
